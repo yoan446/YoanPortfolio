@@ -6,18 +6,20 @@ use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\TechnologieController;
 use App\Http\Controllers\ContactController;
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
-
 //endpoints pour la table projets
-Route::get('/projects', [ProjectController::class, 'listeprojets']);
-Route::post('/projects', [ProjectController::class, 'ajouterprojet']);
+Route::get('/listes-projects', [ProjectController::class, 'listeprojets']);
+Route::get('/un-projects/{id}', [ProjectController::class, 'show']);
+Route::post('/add-projects', [ProjectController::class, 'ajouterprojet']);
+Route::put('/update-projects/{id}', [ProjectController::class, 'update']);
+Route::delete('/delete-projects/{id}', [ProjectController::class, 'destroy']);
 
 //endpoints pour la table technologie
-Route::get('/technology', [TechnologieController::class, 'listetechnologies']);
-Route::post('/technology', [TechnologieController::class, 'ajoutertechnologies']);
+Route::get('/listes-technology', [TechnologieController::class, 'listetechnologies']);
+Route::post('/ajouter-technology', [TechnologieController::class, 'ajoutertechnologies']);
+Route::get('/une-technologies/{id}', [TechnologieController::class, 'show']);
+Route::put('/modifier-technologies/{id}', [TechnologieController::class, 'update']);
+Route::delete('/supprimer-technologies/{id}', [TechnologieController::class, 'destroy']);
 
 //endpoints pour la table contact
-Route::post('/contacts', [ContactController::class, 'envoyerMessage']);
-Route::get('/contacts', [ContactController::class, 'listeMessages']);
+Route::post('/envoyer-message', [ContactController::class, 'envoyerMessage']);
+Route::get('/lister-contacts', [ContactController::class, 'listeMessages']);
