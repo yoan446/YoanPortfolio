@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+
+/* Conteneur principal */
+.nav-header {
+    background-color:#162B3C;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.entete-admin{
+    background-color:#162B3C;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+/* Partie gauche avec le nom */
+.left-side span {
+    margin-left: 50px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Partie droite avec le menu */
+.right-side {
+    margin-right: 60px;
+}
+
+#items {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+#items a{
+    text-decoration: none;
+    color: white;
+}
+#items li {
+    font-size: 1rem;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    padding: 2px;
+}
+
+#items li:hover {
+    color: #F9725F; /* Couleur au survol */
+    border-bottom: solid 1px #F9725F;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 768px) {
+    .nav-header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px 30px;
+    }
+
+    .right-side {
+        margin-right: 0;
+        margin-top: 10px;
+    }
+
+    #items {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

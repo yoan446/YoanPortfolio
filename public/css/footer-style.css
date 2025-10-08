@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+}
+
+footer{
+    background-color: #162B3C;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+}
+
+.logo img{
+    width: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

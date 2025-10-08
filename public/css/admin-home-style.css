@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    color: white;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Le body est un conteneur flex */
+body {
+    display: flex;
+    flex-direction: column; /* Alignement vertical */
+    min-height: 100%; /* Le body occupe toute la hauteur disponible */
+}
+
+/* Le contenu prend l'espace restant */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #1C3447;
+    display: flex;
+    text-align: center;
+}
+
+.tools{
+    align-items: center;
+    margin-left: 30px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    
+}
+
+.all-tools{
+    margin-top: 100px;
+    display: flex;
+    margin-left: 30%;
+}
+
+.tools img{
+    width: 100px;
+    border-radius: 600px;
+}
+
+.tools span{
+    font-weight: bold;
+    position: relative;
+    top: 10px;
+}
+
+.tools-img-1{
+    background-image: url("../../image/projects.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 80px;
+    width: 130px;
+    height: 130px;
+}
+
+.tools-img-2{
+    background-image: url("../../image/tech.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 80px;
+    width: 130px;
+    height: 130px;
+}
+
+.tools-img-3{
+    background-image: url("../../image/user.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 80px;
+    width: 130px;
+    height: 130px;
+}
+
+.tools:hover{
+    transform: scale(1.1);
+}
