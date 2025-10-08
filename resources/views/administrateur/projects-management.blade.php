@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects Management</title>
+
     <!-- Lien vers le fichier CSS -->
     <link href="{{ asset('css/project-management-style.css') }}" rel="stylesheet">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <!-- Inclusion du header -->
     @include('partials.header-admin')
 
     <div class="main-content">
+        <!-- Bouton retour -->
+        <button id="retour" onclick="window.history.back()">Back</button>
+
         <div class="projects-container">
             <div class="projects-header">
                 <h1>Projects Management</h1>
@@ -36,14 +41,22 @@
                         <textarea id="description" name="description" placeholder="Short description..." required></textarea>
                     </div>
 
+                    <!-- ✅ Nouvelle section avec cases à cocher pour les technologies -->
                     <div class="form-group">
-                        <label for="technologies">Technologies Used</label>
-                        <input type="text" id="technologies" name="technologies" placeholder="e.g., Laravel, React, MySQL" required>
+                        <label>Technologies Used</label>
+                       <div class="checkbox-group" id="technologiesContainer">
+                            <!-- Les cases seront générées dynamiquement ici -->
+                        </div>
                     </div>
 
                     <div class="form-group">
                         <label for="link">Project Link</label>
                         <input type="url" id="link" name="link" placeholder="https://example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="image">Image URL</label>
+                        <input type="url" id="image" name="image" placeholder="https://example.com/image.jpg">
                     </div>
 
                     <div class="form-actions">
@@ -61,20 +74,19 @@
                         <th>Title</th>
                         <th>Description</th>
                         <th>Technologies</th>
-                        <th>Link Github</th>
-                        <th>Image url</th>
+                        <th>Link</th>
+                        <th>Image</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody id="projectsList">
-                    <!-- Exemple de ligne (à remplacer par des données dynamiques) -->
                     <tr>
                         <td>1</td>
                         <td>Portfolio Website</td>
                         <td>Personal showcase of my projects and skills.</td>
                         <td>HTML, CSS, JS</td>
                         <td><a href="#" target="_blank">View</a></td>
-                        <td></td>
+                        <td><img src="https://via.placeholder.com/80" alt="Project" width="60"></td>
                         <td class="actions">
                             <button class="btn-edit">Edit</button>
                             <button class="btn-delete">Delete</button>
@@ -83,7 +95,6 @@
                 </tbody>
             </table>
         </div>
-
     </div>
 
     <!-- Inclusion du footer -->

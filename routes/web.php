@@ -25,3 +25,7 @@ Route::get('/Admin-dashboard-home', function () {
 Route::get('/project-management', function () {
     return view('administrateur.projects-management');
 });
+
+Route::get('/technology-management', function () {
+    return view('administrateur.technology-management');
+});
