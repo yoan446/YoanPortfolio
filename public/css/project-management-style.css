@@ -20,23 +20,6 @@ body {
     min-height: 100%; /* Le body occupe toute la hauteur disponible */
 }
 
-/* Le contenu prend l'espace restant */
-/* .main-content {
-    flex: 1;
-    padding: 20px;
-    background-color:#ffffff;
-    display: flex;
-    text-align: center;
-} */
-
-/* ---- Base générale ---- */
-/* body {
-    background-color: #ffffff;
-    font-family: "Roboto", sans-serif;
-    color: #1C3447;
-    margin: 0;
-    padding: 0;
-} */
 
 /* ---- Conteneur principal ---- */
 .main-content {
