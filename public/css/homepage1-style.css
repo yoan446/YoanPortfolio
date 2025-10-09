@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Le body est un conteneur flex */
+body {
+    display: flex;
+    flex-direction: column; /* Alignement vertical */
+    min-height: 100%; /* Le body occupe toute la hauteur disponible */
+}
+
+/* Le contenu prend l'espace restant */
+.main-content {
+    flex: 1;
+    background-color: #1C3447;
+    
+}
+.block1{
+    display: flex;
+    margin-top: 60px;
+}
+
+.left-side-c{
+    text-align: left;
+}
+#hello{
+    margin-left: 50px;
+    color: white;
+    font-size: 55px;
+    margin-top: 80px;
+}
+#point{
+    background-color: #F9725F;
+    border-radius: 30px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;;
+    transform: translateX(10px);
+}
+#ligne{
+    border: solid 2px #F9725F;
+    display: inline-block; /* nécessaire pour appliquer la rotation */
+    transform: rotate(180deg);
+    width: 110px;
+}
+#my-name{
+    position: relative;
+    right: 15px;
+    color: white;
+    font-size: 40px;
+    font-weight: 300;
+}
+#job-name{
+    font-size: 3.5em;
+    color: white;
+    margin-top: 20PX;
+    margin-left: 85px;
+}
+.bouton{
+    margin-top: 55px;
+    margin-left: 50px;
+}
+.bouton button{
+    padding: 10px;
+    width: 120px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+#projectsl{
+    border: solid 1px#F9725F;
+    background-color: #F9725F;
+    color: white;
+    transition-duration: 0.5s;
+}
+#projectsl:hover{
+    background-color:#ff5c46;
+}
+#cv{
+    margin-left: 10px;
+}
+#bcv{
+    border: solid 1px#F9725F;
+    background-color: transparent;
+    color: white;
+    transition-duration: 0.5s;
+}
+#bcv:hover{
+    background-color: #ff5c46;
+}
+.right-side-c {
+    position: relative; /* référence pour les éléments enfants */
+    width: 430px;       /* tu ajustes selon ton design */
+    height: 430px;
+    margin-left: 200px;
+}
+
+/* Image du fond */
+.right-side-c .bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* garde la bonne proportion */
+}
+
+/* Image au-dessus */
+.right-side-c #moi {
+    position: absolute;
+    top: 50%;           /* centre verticalement */
+    left: 50%;          /* centre horizontalement */
+    transform: translate(-50%, -50%); /* centre parfaitement */
+    width: 300px;       /* ajuste la taille selon ton besoin */
+}
+.tools{
+    display: flex;
+}
+.tools-wrapper {
+    position: relative;
+    width: 100%;             /* Toute la largeur de l'écran */
+    overflow: hidden;         /* Cache le débordement pour l'effet de défilement */
+    background-color: #162B3C; /* Optionnel : fond */
+    padding: 10px 0;
+    box-sizing: border-box;
+     z-index: 9999;            /* Au-dessus de tout */
+}
+
+.tools {
+    display: flex;            /* Aligne les spans horizontalement */
+    gap: 100px;                /* Espacement entre chaque span */
+    white-space: nowrap;      /* Empêche le retour à la ligne */
+    animation: scroll 15s linear infinite; /* Animation de défilement */
+}
+
+.tools span {
+    color: #ffffff;           /* Couleur du texte */
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Animation keyframes */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.block2{
+    display: flex;
+}
+.left-block2{
+    width: 50%;
+}
+.left-block2 ul{
+    border-left: solid 3px #ff5c46;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+.left-block2 ul li img{
+    width: 50px;
+}
+.services {                /* Aligne les li horizontalement */
+    justify-content: center;       /* Centre horizontalement tous les items */
+    align-items: center;           /* Centre verticalement les contenus des li */
+    gap: 50px;                     /* Espacement entre chaque li */
+    list-style: none;              /* Supprime les puces par défaut */
+    padding: 0;
+    margin: 0;
+}
+
+.services li {
+    display: flex;                 /* Pour que l'image et le texte soient sur la même ligne */
+    align-items: center;           /* Centre l'image et le texte verticalement */
+    gap: 10px;                     /* Espace entre l'image et le texte */
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: white;
+}
+
+.services li img {
+    width: 40px;                   /* Taille de l'image */
+    height: auto;
+}
+.right-block2{
+    width: 50%;
+}
+
+.right-block2 h1, p{
+    width: 90%;
+    text-align: justify;
+    color: white;
+    margin-top: 20px;
+}
+.right-block2 p{
+    font-weight: 200;
+}
+.right-block2 h1{
+    font-size: 40px;
+}
+.statistique{
+    display: flex;
+    text-align: center;
+}
+.stat-items{
+    margin-left: 10px;
+    text-align: center;       /* centre le texte à l’intérieur */
+}

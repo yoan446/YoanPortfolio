@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/La-b@se-portfolio', function () {
+    return view('client.homepage1');
 });
 
 Route::get('/navbar', function () {
