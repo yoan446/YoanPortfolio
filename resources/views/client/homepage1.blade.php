@@ -28,7 +28,6 @@
                 </div>
             </div>
             <div class="right-side-c">
-                <img src="{{ asset('image/backright.png') }}" alt="background" class="bg-img">
                 <img src="{{ asset('image/moi.png') }}" alt="moi" id="moi">
             </div>
         </section>
@@ -56,22 +55,127 @@
                 </ul>
             </div>
             <div class="right-block2">
-                <h1>About me</h1>
+                <h1 style=" color: #ff5c46;">About me</h1>
                 <p>I'm a passionate software developer with a strong focus on building efficient, user-friendly, and scalable solutions. I enjoy turning ideas into reality through clean code and creative problem-solving. My expertise covers [your main skills: e.g., Python, Django, JavaScript, APIs], and I'm always eager to learn new technologies and take on exciting challenges.</p>
 
-                <div class="statistique" style="text-align: center;">
+                <div class="statistique">
                     <div class="stat-items" >
-                        <h1>120<span style="color:#ff5c46;">+</span></h1>
-                        <span style="color:#ffffff; ">Completed Projects</span>
+                        <h1>120<span style="color: #ff5c46;">+</span></h1>
+                        <span style="color: #ffffff; ">Completed Projects</span>
                     </div>
-                    <div class="stat-items">
-                        <h1>95<span style="color:#ff5c46;">%</span></h1>
-                        <span style="color:#ffffff;">Client Satisfaction</span>
+                    <div class="stat-items" style="margin-left: 30px;">
+                        <h1>95<span style="color: #ff5c46;">%</span></h1>
+                        <span style="color: #ffffff;">Client Satisfaction</span>
                     </div>
-                    <div  class="stat-items">
-                        <h1>10<span style="color:#ff5c46;">+</span></h1>
-                        <span style="color:#ffffff;" >Years of experience</span>
+                    <div  class="stat-items" style="margin-left: 30px;">
+                        <h1>10<span style="color: #ff5c46;">+</span></h1>
+                        <span style="color: #ffffff;" >Years of experience</span>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="block3">
+            <div class="project-header">
+                <h1>Projects</h1>
+                <h4>Here you will find some of the personal and clients projects that I created with each project containing its own case study</h4>
+            </div>
+
+            <div class="project-items">
+                <div class="block3-left-side">
+                    <h2>Performance App Management</h2>
+                    
+                    <div class="tech-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JS</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">Laravel</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">API</span>
+                    </div>
+                    
+                    <p class="description">
+                        I'm a passionate software developer with a strong focus on building 
+                        efficient, user-friendly, and scalable solutions. I enjoy turning ideas 
+                        into reality through clean code and creative problem-solving. My 
+                        expertise covers [your main skills: e.g., Python, Django, JavaScript, 
+                        APIs], and I'm always eager to learn new technologies and take on 
+                        exciting challenges.
+                    </p>
+                    
+                    <div class="project-buttons">
+                        <a href="#" class="btn btn-primary">View Github</a>
+                        <a href="#" class="btn btn-secondary">View project</a>
+                    </div>
+                </div>
+                
+                <div class="block3-right-side">
+                    <div class="laptop-mockup">
+                        <img src="{{asset('image/projet1.png')}}" alt="Performance App Management Dashboard">
+                    </div>
+                </div>
+            </div>
+            <div class="project-items">
+                <div class="block3-left-side">
+                    <h2>Dating App </h2>
+                    
+                    <div class="tech-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JS</span>
+                    </div>
+                    
+                    <p class="description">
+                        I'm a passionate software developer with a strong focus on building efficient,
+                        user-friendly, and scalable solutions. I enjoy turning ideas into reality 
+                        through clean code and creative problem-solving. My expertise covers 
+                        [your main skills: e.g., Python, Django, JavaScript, APIs], and I'm always
+                        eager to learn new technologies and take on exciting challenges.
+                    </p>
+                    
+                    <div class="project-buttons">
+                        <a href="#" class="btn btn-primary">View Github</a>
+                        <a href="#" class="btn btn-secondary">View project</a>
+                    </div>
+                </div>
+                
+                <div class="block3-right-side">
+                    <div class="laptop-mockup">
+                        <img src="{{asset('image/projet2.png')}}" alt="Performance App Management Dashboard">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="block4">
+            <div class="contact">
+                <div class="contact-left-side">
+                    <div class="contact-header">
+                        <span class="contact-label">Contacts</span>
+                        <h2>Have a project?<br>Let's talk!</h2>
+                    </div>
+                    <button class="btn-submit">Submit</button>
+                </div>
+                
+                <div class="contact-right-side">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
