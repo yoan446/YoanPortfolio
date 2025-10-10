@@ -1,99 +1,96 @@
-# 🌐 My Portfolio
+---
 
-A modern, responsive, and dynamic **personal portfolio** built with **Laravel**, designed to showcase my skills, projects, and professional experience.
-It includes dynamic sections for projects, technologies, and services, all powered by a clean backend API.
+````markdown
+# 🌐 Laravel Portfolio API
+
+## 📝 Description
+This project is a **Laravel-based portfolio application** that allows you to **manage your projects, technologies, and contact messages** through a RESTful API.  
+It serves as both a showcase of your work and a backend system for managing your portfolio dynamically.
 
 ---
 
-## 🧠 Features
+## 🚀 Features
 
-* 💼 **Dynamic project management** – display projects stored in the database with their technologies and GitHub links.
-* 🧰 **Technology listing** – automatic loading of the technologies used in each project.
-* 📱 **Responsive design** – adapts perfectly to all devices (desktop, tablet, mobile).
-* ⚡ **Fast and lightweight** – optimized for performance and quick loading.
-* 🌍 **API-ready structure** – easily extendable for admin management or CMS integration.
+### 🎨 Projects Management
+- Add, edit, delete, and view your projects.
+- Each project includes information such as title, description, technologies used, image, and link.
 
----
+### ⚙️ Technologies Management
+- Manage the technologies or tools you use in your projects.
+- Each technology can be added, edited, or deleted via API endpoints.
 
-## 🛠️ Tech Stack
-
-* **Backend**: Laravel 11
-* **Frontend**: HTML5, CSS3, JavaScript (Vanilla)
-* **Database**: MySQL
-* **Version Control**: Git / GitHub
-* **Environment**: PHP 8.2+, Composer, npm
+### 💬 Contact Form Management
+- Allows visitors to send you messages.
+- Messages are stored in the database and can be retrieved via API.
 
 ---
 
-## 📂 Folder Structure
+## 🧩 API Endpoints
 
-```
-my-portfolio/
-├── app/
-│   ├── Http/
-│   ├── Models/
-│   └── ...
-├── public/
-│   ├── image/
-│   ├── css/
-│   ├── js/
-│   └── index.php
-├── resources/
-│   ├── views/
-│   └── ...
-├── routes/
-│   └── web.php
-├── database/
-│   └── migrations/
-├── .env.example
-├── composer.json
-└── package.json
-```
+### 🗂 Projects
+| Method | Endpoint | Description |
+|--------|-----------|-------------|
+| `GET` | `/api/listes-projects` | List all projects |
+| `GET` | `/api/un-projects/{id}` | Get a single project by ID |
+| `POST` | `/api/add-projects` | Add a new project |
+| `PUT` | `/api/update-projects/{id}` | Update an existing project |
+| `DELETE` | `/api/delete-projects/{id}` | Delete a project |
 
 ---
 
-## ⚙️ Installation & Setup
+### 🧠 Technologies
+| Method | Endpoint | Description |
+|--------|-----------|-------------|
+| `GET` | `/api/listes-technology` | List all technologies |
+| `GET` | `/api/une-technologies/{id}` | Get a single technology |
+| `POST` | `/api/ajouter-technology` | Add a new technology |
+| `PUT` | `/api/modifier-technologies/{id}` | Update a technology |
+| `DELETE` | `/api/supprimer-technologies/{id}` | Delete a technology |
+
+---
+
+### 💌 Contacts
+| Method | Endpoint | Description |
+|--------|-----------|-------------|
+| `POST` | `/api/envoyer-message` | Send a message through the contact form |
+| `GET` | `/api/lister-contacts` | Retrieve all contact messages |
+
+---
+
+## 🛠️ Installation Guide
+
+Follow these steps to set up and run the project on your machine:
 
 ### 1️⃣ Clone the repository
-
 ```bash
-git clone https://github.com/yoan446/YoanPortfolio.git
-```
+git clone https://github.com/yourusername/portfolio-api.git
+cd portfolio-api
+````
 
-### 2️⃣ Navigate into the project folder
-
-```bash
-cd YoanPortfolio
-```
-
-### 3️⃣ Install PHP dependencies
-
-Make sure you have [Composer](https://getcomposer.org/) installed, then run:
+### 2️⃣ Install dependencies
 
 ```bash
 composer install
 ```
 
-### 4️⃣ Install Node dependencies (optional for frontend assets)
+### 3️⃣ Create environment file
 
-```bash
-npm install
-```
-
-### 5️⃣ Copy and configure environment file
+Duplicate the `.env.example` file and rename it to `.env`:
 
 ```bash
 cp .env.example .env
 ```
 
-Then edit `.env` to match your local setup:
+### 4️⃣ Configure the environment
+
+In your `.env` file, set up the following values according to your system:
 
 ```env
-APP_NAME="My Portfolio"
+APP_NAME=PortfolioAPI
 APP_ENV=local
 APP_KEY=
 APP_DEBUG=true
-APP_URL=http://localhost:8000
+APP_URL=http://localhost
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -103,93 +100,96 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-### 6️⃣ Generate application key
+Then generate the application key:
 
 ```bash
 php artisan key:generate
 ```
 
-### 7️⃣ Run migrations (if the project uses a database)
+### 5️⃣ Run migrations
+
+This will create all necessary tables in your database:
 
 ```bash
 php artisan migrate
 ```
 
-### 8️⃣ Serve the project locally
+### 6️⃣ Serve the project
+
+To start the Laravel development server, run:
 
 ```bash
 php artisan serve
 ```
 
-➡️ The project will be accessible at: [http://localhost:8000](http://localhost:8000)
-
----
-
-## 🖼️ Adding Images
-
-All images used in the portfolio (project thumbnails, backgrounds, etc.) should be placed in:
+The API will now be available at:
 
 ```
-public/image/
-```
-
-Example:
-
-```
-public/image/projet1.png
-public/image/projet2.png
+http://127.0.0.1:8000/api/
 ```
 
 ---
 
-## 🔧 API Endpoints (Example)
+## 🧾 Example Usage
 
-| Endpoint             | Method | Description                                              |
-| -------------------- | ------ | -------------------------------------------------------- |
-| `/listes-technology` | `GET`  | Returns the list of technologies                         |
-| `/listes-projects`   | `GET`  | Returns all portfolio projects with related technologies |
+### ➕ Add a Project
 
-Response example:
+**POST** `/api/add-projects`
+
+Request body (JSON):
 
 ```json
 {
-  "id": 7,
-  "title": "My Portfolio",
-  "description": "A modern and responsive portfolio built with Laravel.",
-  "github_link": "https://github.com/yoan446/YoanPortfolio.git",
+  "titre": "My Portfolio Website",
+  "description": "A personal portfolio built with Laravel",
+  "technologies": "Laravel, Bootstrap, MySQL",
   "image": "image/projet3.png",
-  "technologies": [
-    { "tech_name": "Laravel" },
-    { "tech_name": "JavaScript" },
-    { "tech_name": "MySQL" }
-  ]
+  "lien": "https://myportfolio.com"
 }
 ```
 
 ---
 
-## 💡 How to Run on Another Machine
+## 🧑‍💻 Tech Stack
 
-If you want to run this project on another machine:
-
-1. **Copy the entire project folder** or **clone it from GitHub**.
-2. **Install dependencies** with `composer install` and `npm install`.
-3. **Create a new `.env` file** and update your local database info.
-4. **Run `php artisan key:generate`** to create a new app key.
-5. **Run `php artisan serve`** and open the link displayed (usually [http://localhost:8000](http://localhost:8000)).
-
-✅ Your portfolio is now live locally on the new machine!
+* **Backend**: Laravel 11 (PHP Framework)
+* **Database**: MySQL
+* **Frontend (optional)**: HTML / CSS / JavaScript (or Vue/React)
+* **API Architecture**: RESTful
+* **Version Control**: Git & GitHub
 
 ---
 
-## 🧑‍💻 Author
+## 👨‍🎓 Author
 
-**Name:** Yoan Aspirine
-**GitHub:** [yoan446](https://github.com/yoan446)
-**Email:** [your.email@example.com](mailto:your.email@example.com)
+**Jonathan Aspirine**
+📧 [[your-email@example.com](mailto:your-email@example.com)]
+🌍 [https://your-portfolio-link.com](https://your-portfolio-link.com)
 
 ---
 
 ## 📜 License
 
-This project is open-source and available under the [MIT License](https://opensource.org/licenses/MIT).
+This project is licensed under the MIT License — you are free to use, modify, and distribute it.
+
+---
+
+## 💡 Tips
+
+To deploy your Laravel portfolio API on another machine:
+
+1. Clone the repository.
+2. Run `composer install`.
+3. Copy `.env` and update database credentials.
+4. Run `php artisan migrate`.
+5. Start the server using `php artisan serve`.
+
+---
+
+✨ *Enjoy building your personal portfolio API with Laravel!* ✨
+
+```
+
+---
+Cela rendrait ton README encore plus complet.
+```
