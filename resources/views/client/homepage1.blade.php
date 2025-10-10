@@ -73,72 +73,7 @@
                 <h4>Here you will find some of the personal and clients projects that I created with each project containing its own case study</h4>
             </div>
 
-            <div class="project-items">
-                <div class="block3-left-side">
-                    <h2>Performance App Management</h2>
-                    
-                    <div class="tech-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JS</span>
-                        <span class="tag">PHP</span>
-                        <span class="tag">Laravel</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">Git</span>
-                        <span class="tag">API</span>
-                    </div>
-                    
-                    <p class="description">
-                        I'm a passionate software developer with a strong focus on building 
-                        efficient, user-friendly, and scalable solutions. I enjoy turning ideas 
-                        into reality through clean code and creative problem-solving. My 
-                        expertise covers [your main skills: e.g., Python, Django, JavaScript, 
-                        APIs], and I'm always eager to learn new technologies and take on 
-                        exciting challenges.
-                    </p>
-                    
-                    <div class="project-buttons">
-                        <a href="#" class="btn btn-primary">View Github</a>
-                        <a href="#" class="btn btn-secondary">View project</a>
-                    </div>
-                </div>
-                
-                <div class="block3-right-side">
-                    <div class="laptop-mockup">
-                        <img src="{{asset('image/projet1.png')}}" alt="Performance App Management Dashboard">
-                    </div>
-                </div>
-            </div>
-            <div class="project-items">
-                <div class="block3-left-side">
-                    <h2>Dating App </h2>
-                    
-                    <div class="tech-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JS</span>
-                    </div>
-                    
-                    <p class="description">
-                        I'm a passionate software developer with a strong focus on building efficient,
-                        user-friendly, and scalable solutions. I enjoy turning ideas into reality 
-                        through clean code and creative problem-solving. My expertise covers 
-                        [your main skills: e.g., Python, Django, JavaScript, APIs], and I'm always
-                        eager to learn new technologies and take on exciting challenges.
-                    </p>
-                    
-                    <div class="project-buttons">
-                        <a href="#" class="btn btn-primary">View Github</a>
-                        <a href="#" class="btn btn-secondary">View project</a>
-                    </div>
-                </div>
-                
-                <div class="block3-right-side">
-                    <div class="laptop-mockup">
-                        <img src="{{asset('image/projet2.png')}}" alt="Performance App Management Dashboard">
-                    </div>
-                </div>
-            </div>
+            <div id="projects-container"></div>
         </section>
 
         <section class="block4" id="contacts">

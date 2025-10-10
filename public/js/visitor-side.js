@@ -98,3 +98,62 @@ btnSubmit.addEventListener('click', envoyerFormulaire);
 
 // Optionnel : permettre l'envoi avec la touche Entrée dans le formulaire
 form.addEventListener('submit', envoyerFormulaire);
+
+document.addEventListener("DOMContentLoaded", function () {
+    const projectContainer = document.getElementById("projects-container");
+
+    fetch("/api/listes-projects")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Erreur lors du chargement des projets");
+            }
+            return response.json();
+        })
+        .then(data => {
+            projectContainer.innerHTML = "";
+
+            data.forEach(project => {
+                // Génération des tags technologiques
+                const techTags = project.technologies.map(
+                    tech => `<span class="tag">${tech.tech_name}</span>`
+                ).join("");
+
+                // Construction du chemin complet pour l'image
+                const imageUrl = `/${project.image}`; // ex: /image/projet3.png
+
+                // Création du bloc HTML du projet
+                const projectHTML = `
+                    <div class="project-items">
+                        <div class="block3-left-side">
+                            <h2>${project.title}</h2>
+
+                            <div class="tech-tags">
+                                ${techTags}
+                            </div>
+
+                            <p class="description">
+                                ${project.description}
+                            </p>
+
+                            <div class="project-buttons">
+                                <a href="${project.github_link}" target="_blank" class="btn btn-primary">View Github</a>
+                                <a href="#" class="btn btn-secondary">View Project</a>
+                            </div>
+                        </div>
+
+                        <div class="block3-right-side">
+                            <div class="laptop-mockup">
+                                <img src="${imageUrl}" alt="${project.title}">
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                projectContainer.insertAdjacentHTML("beforeend", projectHTML);
+            });
+        })
+        .catch(error => {
+            console.error("Erreur :", error);
+            projectContainer.innerHTML = `<p style="color:red;">Erreur de chargement des projets.</p>`;
+        });
+});
