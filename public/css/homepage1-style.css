@@ -160,7 +160,7 @@ body {
 }
 .block2{
     display: flex;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 .left-block2{
     width: 50%;
@@ -220,7 +220,7 @@ body {
     text-align: center;
 }
 .block3{
-    margin-top: 100px;
+    margin-top: 160px;
 }
 .project-header{
     text-align: center;
@@ -477,4 +477,13 @@ body {
         max-width: 100%;
         width: 100%;
     }
+}
+
+.moon{
+    background-color: #ff5252;
+    width: 350px;
+    height: 350px;
+    border-radius: 170px;
+    margin-left: 15px;
+    margin-top: 70px;
 }

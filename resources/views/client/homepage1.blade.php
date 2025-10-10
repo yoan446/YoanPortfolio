@@ -16,37 +16,29 @@
     <!-- Inclusion du header -->
     @include('partials.header')
 
-    <div class="main-content">
+    <div class="main-content" id="home">
         <section class="block1">
             <div class="left-side-c">
                 <h1 id="hello">Hello<span id="point"></span></h1>
                 <span id="my-name"><span id="ligne"></span>I'm Yoan Tioma</span>
                 <h1 id="job-name">Junior Web Developer</h1>
                 <div class="bouton">
-                    <a href="#"><button id="projectsl">Got a Project?</button></a>
-                    <a href="#" id="cv"><button id="bcv">My resume</button></a>
+                    <a href="#contacts"><button id="projectsl">Got a Project?</button></a>
+                    <a href="{{ asset('document/CV Yoan Tioma.pdf') }}" id="cv"><button id="bcv">My resume</button></a>
                 </div>
             </div>
             <div class="right-side-c">
+                <div class="moon"></div>
                 <img src="{{ asset('image/moi.png') }}" alt="moi" id="moi">
             </div>
         </section>
-        <section class="tools-wrapper">
-            <div class="tools">
-                <span>HTML5</span>
-                <span>CSS3</span>
-                <span>JS</span>
-                <span>PHP</span>
-                <span>Docker</span>
-                <span>Python</span>
-                <span>Laravel</span>
-                <span>Github</span>
-                <span>Figma</span>
-                <span>Canva</span>
+        <section class="tools-wrapper" id="about">
+            <div class="tools" id="tools-container">
+                <!-- Les technologies seront chargées ici -->
             </div>
         </section>
 
-        <section class="block2">
+        <section class="block2" >
             <div class="left-block2">
                 <ul class="services">
                     <li><img src="{{asset('image/la-toile.png')}}" alt=""> Website Development</li>
@@ -55,8 +47,8 @@
                 </ul>
             </div>
             <div class="right-block2">
-                <h1 style=" color: #ff5c46;">About me</h1>
-                <p>I'm a passionate software developer with a strong focus on building efficient, user-friendly, and scalable solutions. I enjoy turning ideas into reality through clean code and creative problem-solving. My expertise covers [your main skills: e.g., Python, Django, JavaScript, APIs], and I'm always eager to learn new technologies and take on exciting challenges.</p>
+                <h1 style=" color: #ff5c46;" >About me</h1>
+                <p >I'm a passionate software developer with a strong focus on building efficient, user-friendly, and scalable solutions. I enjoy turning ideas into reality through clean code and creative problem-solving. My expertise covers [your main skills: e.g., Python, Django, JavaScript, APIs], and I'm always eager to learn new technologies and take on exciting challenges.</p>
 
                 <div class="statistique">
                     <div class="stat-items" >
@@ -75,7 +67,7 @@
             </div>
         </section>
 
-        <section class="block3">
+        <section class="block3" id="projects">
             <div class="project-header">
                 <h1>Projects</h1>
                 <h4>Here you will find some of the personal and clients projects that I created with each project containing its own case study</h4>
@@ -149,7 +141,7 @@
             </div>
         </section>
 
-        <section class="block4">
+        <section class="block4" id="contacts">
             <div class="contact">
                 <div class="contact-left-side">
                     <div class="contact-header">
@@ -183,6 +175,6 @@
 
     <!-- Inclusion du footer -->
     @include('partials.footer')
-
+    <script src="{{ asset('js/visitor-side.js') }}"></script>
 </body>
 </html>

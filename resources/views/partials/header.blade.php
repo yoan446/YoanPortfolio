@@ -13,14 +13,14 @@
 <body>
     <div class="nav-header">
         <div class="left-side">
-            <span>Yoan TIOMA</span>
+            <span >Yoan TIOMA</span>
         </div>
         <div class="right-side">
             <ul id="items">
-                <a href="#"><li>Home</li></a>
-                <a href="#"><li>About</li></a>
-                <a href="#"><li>Projects</li></a>
-                <a href="#"><li>Contacts</li></a>
+                <a href="#home"><li>Home</li></a>
+                <a href="#about"><li>About</li></a>
+                <a href="#projects"><li>Projects</li></a>
+                <a href="#contacts"><li>Contacts</li></a>
             </ul>
         </div>
     </div>
