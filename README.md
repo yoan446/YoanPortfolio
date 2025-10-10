@@ -185,9 +185,3 @@ To deploy your Laravel portfolio API on another machine:
 ---
 
 ✨ *Enjoy building your personal portfolio API with Laravel!* ✨
-
-```
-
----
-Cela rendrait ton README encore plus complet.
-```
