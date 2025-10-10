@@ -1,6 +1,4 @@
----
 
-````markdown
 # 🌐 Laravel Portfolio API
 
 ## 📝 Description
