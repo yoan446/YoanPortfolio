@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Accueil</title>
+    <title>La b@se Portfolio</title>
     <!-- Lien vers le fichier CSS -->
     <link href="{{ asset('css/homepage1-style.css') }}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,10 +28,12 @@
                 </div>
             </div>
             <div class="right-side-c">
+                <!-- moon c'est le cercle qui est derière l'image id moi -->
                 <div class="moon"></div>
                 <img src="{{ asset('image/moi.png') }}" alt="moi" id="moi">
             </div>
         </section>
+
         <section class="tools-wrapper" id="about">
             <div class="tools" id="tools-container">
                 <!-- Les technologies seront chargées ici -->

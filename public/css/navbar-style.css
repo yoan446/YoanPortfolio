@@ -1,16 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-variation-settings:"wdth" 100;
+    font-variation-settings: "wdth" 100;
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 /* Conteneur principal */
 .nav-header {
-    background-color:#162B3C;
+    background-color: #162B3C;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -18,28 +23,37 @@
     height: 55px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     z-index: 1999;
+    padding: 0 20px;
 }
 
-.entete-admin{
-    background-color:#162B3C;
+.entete-admin {
+    background-color: #162B3C;
     color: white;
     text-align: center;
     padding: 5px;
 }
 
 /* Partie gauche avec le nom */
+.left-side {
+    flex-shrink: 0;
+}
+
 .left-side span {
-    margin-left: 50px;
+    margin-left: 30px;
     font-size: 1.4rem;
     font-weight: bold;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 /* Partie droite avec le menu */
 .right-side {
-    margin-right: 60px;
+    margin-right: 40px;
 }
 
 #items {
@@ -50,10 +64,11 @@
     padding: 0;
 }
 
-#items a{
+#items a {
     text-decoration: none;
     color: white;
 }
+
 #items li {
     font-size: 1rem;
     cursor: pointer;
@@ -62,6 +77,144 @@
 }
 
 #items li:hover {
-    color: #F9725F; /* Couleur au survol */
+    color: #F9725F;
     border-bottom: solid 1px #F9725F;
+}
+
+/* Bouton menu hamburger (caché par défaut) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    margin-right: 20px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+/* Tablettes (jusqu'à 992px) */
+@media (max-width: 992px) {
+    .left-side span {
+        margin-left: 20px;
+        font-size: 1.2rem;
+    }
+
+    .right-side {
+        margin-right: 20px;
+    }
+
+    #items {
+        gap: 20px;
+    }
+
+    #items li {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobiles (jusqu'à 768px) */
+@media (max-width: 768px) {
+    .nav-header {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    .left-side span {
+        margin-left: 0;
+        font-size: 1.1rem;
+    }
+
+    .right-side {
+        margin-right: 0;
+    }
+
+    /* Afficher le bouton hamburger */
+    .menu-toggle {
+        display: flex;
+        position: relative;
+        z-index: 2000;
+    }
+
+    /* Menu caché par défaut sur mobile */
+    #items {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 250px;
+        height: calc(100vh - 60px);
+        background-color: #162B3C;
+        flex-direction: column;
+        gap: 0;
+        padding: 30px 0;
+        transition: right 0.3s ease;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+        overflow-y: auto;
+    }
+
+    #items a {
+        width: 100%;
+        padding: 15px 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #items li {
+        font-size: 1rem;
+        width: 100%;
+        padding: 0;
+    }
+
+    #items li:hover {
+        border-bottom: none;
+        background-color: rgba(249, 114, 95, 0.1);
+    }
+
+    /* Menu ouvert (à activer avec JavaScript) */
+    #items.active {
+        right: 0;
+    }
+
+    /* Animation du bouton hamburger en X */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+}
+
+/* Petits mobiles (jusqu'à 480px) */
+@media (max-width: 480px) {
+    .left-side span {
+        font-size: 1rem;
+    }
+
+    #items {
+        width: 200px;
+    }
+
+    #items a {
+        padding: 12px 20px;
+    }
+}
+
+/* Très petits mobiles (jusqu'à 360px) */
+@media (max-width: 360px) {
+    .left-side span {
+        font-size: 0.9rem;
+    }
+
+    #items {
+        width: 180px;
+    }
 }

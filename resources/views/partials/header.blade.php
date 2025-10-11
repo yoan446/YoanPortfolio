@@ -13,8 +13,16 @@
 <body>
     <div class="nav-header">
         <div class="left-side">
-            <span >Yoan TIOMA</span>
+            <span>Yoan TIOMA</span>
         </div>
+        
+        <!-- Bouton hamburger -->
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
         <div class="right-side">
             <ul id="items">
                 <a href="#home"><li>Home</li></a>
@@ -25,5 +33,6 @@
         </div>
     </div>
 
+    <script src="{{ asset('js/header-script.js') }}"></script>
 </body>
 </html>

@@ -26,102 +26,304 @@ body {
     background: linear-gradient(135deg, #2c5364 0%, #203a43 50%, #0f2027 100%);
     
 }
-.block1{
+/* Style de base */
+.block1 {
     display: flex;
     margin-top: 100px;
+    padding: 0 20px;
+    gap: 40px;
+    align-items: center;
 }
 
-.left-side-c{
+.left-side-c {
     text-align: left;
     width: 50%;
+    flex-shrink: 0;
 }
-#hello{
+
+#hello {
     margin-left: 110px;
     color: white;
     font-size: 55px;
     margin-top: 80px;
 }
-#point{
+
+#point {
     background-color: #F9725F;
     border-radius: 30px;
     width: 15px;
     height: 15px;
-    display: inline-block;;
+    display: inline-block;
     transform: translateX(10px);
 }
-#ligne{
+
+#ligne {
     border: solid 2px #ff6b6b;
-    display: inline-block; /* nécessaire pour appliquer la rotation */
+    display: inline-block;
     transform: rotate(180deg);
     width: 60px;
 }
-#my-name{
+
+#my-name {
     position: relative;
     color: white;
     font-size: 40px;
     font-weight: 300;
     left: 145px;
 }
-#job-name{
+
+#job-name {
     font-size: 3.1em;
     color: white;
-    margin-top: 20PX;
+    margin-top: 20px;
     margin-left: 145px;
     width: 100%;
 }
-.bouton{
+
+.bouton {
     margin-top: 85px;
     margin-left: 110px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
-.bouton button{
+
+.bouton button {
     padding: 10px;
     width: 120px;
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
+    border-radius: 4px;
 }
-#projectsl{
-    border: solid 1px#F9725F;
+
+#projectsl {
+    border: solid 1px #F9725F;
     background-color: #F9725F;
     color: white;
     transition-duration: 0.5s;
 }
-#projectsl:hover{
-    background-color:#ff5c46;
+
+#projectsl:hover {
+    background-color: #ff5c46;
 }
-#cv{
-    margin-left: 10px;
+
+#cv {
+    margin-left: 0;
 }
-#bcv{
-    border: solid 1px#F9725F;
+
+#bcv {
+    border: solid 1px #F9725F;
     background-color: transparent;
     color: white;
     transition-duration: 0.5s;
 }
-#bcv:hover{
+
+#bcv:hover {
     background-color: #ff5c46;
 }
+
 .right-side-c {
-    position: relative; /* référence pour les éléments enfants */
-    width: 430px;       /* tu ajustes selon ton design */
+    position: relative;
     height: 430px;
-    margin-left: 200px;
+    flex-shrink: 0;
+    left: 180px;
 }
 
-/* Image du fond */
-.right-side-c .bg-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* garde la bonne proportion */
-}
-
-/* Image au-dessus */
 .right-side-c #moi {
     position: absolute;
-    top: 50%;           /* centre verticalement */
-    left: 45%;          /* centre horizontalement */
-    transform: translate(-50%, -50%); /* centre parfaitement */
-    width: 340px;       /* ajuste la taille selon ton besoin */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 340px;
+    max-width: 100%;
+}
+
+/* Tablettes (jusqu'à 1200px) */
+@media (max-width: 1200px) {
+    .block1 {
+        margin-top: 60px;
+    }
+
+    #hello {
+        margin-left: 60px;
+        font-size: 45px;
+        margin-top: 50px;
+    }
+
+    #my-name {
+        font-size: 32px;
+        left: 90px;
+    }
+
+    #job-name {
+        font-size: 2.5em;
+        margin-left: 90px;
+    }
+
+    .bouton {
+        margin-left: 60px;
+        margin-top: 60px;
+    }
+
+    .right-side-c {
+        width: 350px;
+        height: 350px;
+        margin-left: 20px;
+    }
+    .moon{
+        left: 50px;
+    }
+
+    .right-side-c #moi {
+        width: 280px;
+    }
+}
+
+/* Tablettes moyennes (jusqu'à 992px) */
+@media (max-width: 992px) {
+    .block1 {
+        gap: 20px;
+    }
+
+    #hello {
+        margin-left: 40px;
+        font-size: 40px;
+    }
+
+    #my-name {
+        font-size: 28px;
+        left: 60px;
+    }
+
+    #ligne {
+        width: 50px;
+    }
+
+    #job-name {
+        font-size: 2em;
+        margin-left: 60px;
+    }
+
+    .bouton {
+        margin-left: 40px;
+        margin-top: 50px;
+    }
+
+    .right-side-c {
+        width: 300px;
+        height: 300px;
+        margin-left: 20px;
+    }
+
+    .right-side-c #moi {
+        width: 240px;
+    }
+}
+
+/* Mobiles (jusqu'à 768px) */
+@media (max-width: 768px) {
+    .block1 {
+        flex-direction: column;
+        margin-top: 40px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-side-c {
+        width: 100%;
+        text-align: center;
+    }
+
+    #hello {
+        margin-left: 0;
+        font-size: 36px;
+        margin-top: 20px;
+    }
+
+    #my-name {
+        font-size: 24px;
+        left: 0;
+        display: block;
+        margin-top: 15px;
+    }
+
+    #ligne {
+        width: 40px;
+    }
+
+    #job-name {
+        font-size: 1.8em;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .bouton {
+        margin-left: 0;
+        margin-top: 40px;
+        justify-content: center;
+    }
+
+    .right-side-c {
+        width: 280px;
+        height: 280px;
+        margin-left: 0;
+        margin-top: 40px;
+    }
+
+    .right-side-c #moi {
+        width: 220px;
+    }
+}
+
+/* Petits mobiles (jusqu'à 480px) */
+@media (max-width: 480px) {
+    .block1 {
+        padding: 0 15px;
+        margin-top: 30px;
+    }
+
+    #hello {
+        font-size: 28px;
+    }
+
+    #point {
+        width: 12px;
+        height: 12px;
+    }
+
+    #my-name {
+        font-size: 20px;
+    }
+
+    #ligne {
+        width: 30px;
+    }
+
+    #job-name {
+        font-size: 1.5em;
+    }
+
+    .bouton {
+        margin-top: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bouton button {
+        width: 140px;
+        padding: 12px;
+    }
+
+    .right-side-c {
+        width: 240px;
+        height: 240px;
+        margin-top: 30px;
+    }
+
+    .right-side-c #moi {
+        width: 190px;
+    }
 }
 .tools{
     display: flex;
@@ -486,4 +688,236 @@ body {
     border-radius: 170px;
     margin-left: 15px;
     margin-top: 70px;
+}
+
+
+
+/* Tablettes (jusqu'à 1200px) */
+@media (max-width: 1200px) {
+    .block1 {
+        margin-top: 60px;
+        gap: 30px;
+    }
+
+    #hello {
+        margin-left: 60px;
+        font-size: 45px;
+        margin-top: 50px;
+    }
+
+    #my-name {
+        font-size: 32px;
+        left: 90px;
+    }
+
+    #job-name {
+        font-size: 2.5em;
+        margin-left: 90px;
+    }
+
+    .bouton {
+        margin-left: 60px;
+        margin-top: 60px;
+    }
+
+    .right-side-c {
+        width: 380px;
+        height: 380px;
+        left: -50px;
+    }
+    .moon{
+        background-color: #ff5252;
+        width: 250px;
+        height: 250px;
+        margin-left: 110px;
+    }
+    .right-side-c #moi {
+        width: 240px;
+        margin-left: 60px;
+    }
+    .project-header{
+        padding: 45px;
+    }
+}
+
+/* Tablettes moyennes (jusqu'à 992px) */
+@media (max-width: 992px) {
+    .block1 {
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .left-side-c {
+        width: 55%;
+    }
+
+    #hello {
+        margin-left: 40px;
+        font-size: 40px;
+    }
+
+    #my-name {
+        font-size: 28px;
+        left: 60px;
+    }
+
+    #ligne {
+        width: 50px;
+    }
+
+    #job-name {
+        font-size: 2em;
+        margin-left: 60px;
+    }
+
+    .bouton {
+        margin-left: 40px;
+        margin-top: 50px;
+    }
+
+    .right-side-c {
+        width: 350px;
+        height: 350px;
+        left: -80px;
+    }
+}
+
+/* Mobiles (jusqu'à 768px) */
+@media (max-width: 768px) {
+    .block1 {
+        flex-direction: column;
+        margin-top: 40px;
+        align-items: center;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .left-side-c {
+        width: 100%;
+        text-align: center;
+    }
+
+    #hello {
+        margin-left: 0;
+        font-size: 36px;
+        margin-top: 20px;
+    }
+
+    #my-name {
+        font-size: 24px;
+        left: 0;
+        display: block;
+        margin-top: 15px;
+    }
+
+    #ligne {
+        width: 40px;
+    }
+
+    #job-name {
+        font-size: 1.8em;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .bouton {
+        margin-left: 0;
+        margin-top: 40px;
+        justify-content: center;
+    }
+
+    .right-side-c {
+        width: 300px;
+        height: 300px;
+        order: -1;
+    }
+    .right-side-c #moi {
+        margin-left: 90px;
+    }
+    .moon{
+        width: 220px;
+        height: 220px;
+        margin-left: 130px;
+    }
+}
+
+/* Petits mobiles (jusqu'à 480px) */
+@media (max-width: 480px) {
+    .block1 {
+        padding: 0 15px;
+        margin-top: 30px;
+        gap: 30px;
+    }
+
+    #hello {
+        font-size: 28px;
+    }
+
+    #point {
+        width: 12px;
+        height: 12px;
+    }
+
+    #my-name {
+        font-size: 20px;
+    }
+
+    #ligne {
+        width: 30px;
+    }
+
+    #job-name {
+        font-size: 1.5em;
+    }
+
+    .bouton {
+        margin-top: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bouton button {
+        width: 140px;
+        padding: 12px;
+    }
+
+    .right-side-c {
+        width: 250px;
+        height: 250px;
+    }
+    .right-side-c #moi {
+        margin-left: 90px;
+        width: 190px ;
+    }
+    .moon{
+        margin-top: 30px;
+        margin-left: 100px;
+    }
+}
+
+/* Très petits mobiles (jusqu'à 360px) */
+@media (max-width: 360px) {
+    #hello {
+        font-size: 24px;
+    }
+
+    #my-name {
+        font-size: 18px;
+    }
+
+    #job-name {
+        font-size: 1.3em;
+    }
+
+    .right-side-c {
+        width: 220px;
+        height: 220px;
+    }
+    .moon{
+        width: 200px;
+        height: 200px;
+    }
+    .right-side-c #moi {
+        width: 160px ;
+    }
 }
