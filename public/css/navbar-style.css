@@ -88,6 +88,7 @@ html, body {
     cursor: pointer;
     gap: 5px;
     margin-right: 20px;
+    left: 40%;
 }
 
 .menu-toggle span {
@@ -191,6 +192,9 @@ html, body {
     .menu-toggle.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -7px);
     }
+    .menu-toggle{
+        margin-right: 30px;
+    }
 }
 
 /* Petits mobiles (jusqu'à 480px) */
@@ -216,5 +220,8 @@ html, body {
 
     #items {
         width: 180px;
+    }
+    .menu-toggle{
+        margin-right: 40px;
     }
 }

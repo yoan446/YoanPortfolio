@@ -360,67 +360,171 @@ body {
         transform: translateX(-100%);
     }
 }
-.block2{
+.block2 {
     display: flex;
     margin-top: 60px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
 }
-.left-block2{
+
+/* --- Partie gauche --- */
+.left-block2 {
     width: 50%;
     margin-top: 50px;
 }
-.left-block2 ul{
+
+.left-block2 ul {
     border-left: solid 3px #ff5c46;
     margin-left: 110px;
     margin-top: 30px;
 }
-.left-block2 ul li img{
-    width: 50px;
-}
-.services {                /* Aligne les li horizontalement */
-    justify-content: center;       /* Centre horizontalement tous les items */
-    align-items: center;           /* Centre verticalement les contenus des li */
-    gap: 50px;                     /* Espacement entre chaque li */
-    list-style: none;              /* Supprime les puces par défaut */
+
+.services {
+    display: flex;
+    flex-direction: column; /* Par défaut en colonne */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    list-style: none;
     padding: 0;
 }
 
 .services li {
-    display: flex;                 /* Pour que l'image et le texte soient sur la même ligne */
-    align-items: center;           /* Centre l'image et le texte verticalement */
-    gap: 10px;                     /* Espace entre l'image et le texte */
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-weight: bold;
     font-size: 16px;
-    margin-top: 20px;
-    margin-left: 20px;
     color: white;
 }
 
 .services li img {
-    width: 40px;                   /* Taille de l'image */
+    width: 40px;
     height: auto;
 }
-.right-block2{
+
+/* --- Partie droite --- */
+.right-block2 {
     width: 50%;
 }
 
-.right-block2 h1, p{
+.right-block2 h1, 
+.right-block2 p {
     width: 90%;
     color: white;
     margin-top: 20px;
-    
 }
-.right-block2 p{
+
+.right-block2 h1 {
+    font-size: 40px;
+    color: #ff5c46;
+}
+
+.right-block2 p {
     font-size: 16px;
     line-height: 1.7;
 }
-.right-block2 h1{
-    font-size: 40px;
-   
-}
-.statistique{
+
+.statistique {
     display: flex;
+    flex-wrap: wrap;
     text-align: center;
+    margin-top: 30px;
 }
+
+.stat-items {
+    flex: 1;
+    min-width: 120px;
+}
+
+/* --- 🌐 Responsive Design --- */
+
+/* TABLETTES (jusqu’à ~1024px) */
+@media screen and (max-width: 1024px) {
+    .block2 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-block2, .right-block2 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .left-block2 ul {
+        margin-left: 0;
+        border-left: none;
+    }
+
+    .services {
+        align-items: center;
+    }
+
+    .right-block2 h1 {
+        font-size: 32px;
+    }
+
+    .right-block2 p {
+        font-size: 15px;
+    }
+}
+
+/* SMARTPHONES (jusqu’à ~768px) */
+@media screen and (max-width: 768px) {
+    /* On cache la partie Services */
+    .left-block2 {
+        display: none;
+    }
+
+    /* La partie About prend toute la largeur */
+    .right-block2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .right-block2 h1 {
+        font-size: 28px;
+    }
+
+    .right-block2 p {
+        font-size: 14px;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .statistique {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .stat-items {
+        margin-left: 0 !important;
+    }
+}
+
+/* PETITS SMARTPHONES (jusqu’à ~480px) */
+@media screen and (max-width: 480px) {
+    .right-block2 h1 {
+        font-size: 24px;
+    }
+
+    .right-block2 p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .stat-items h1 {
+        font-size: 22px;
+    }
+
+    .stat-items span {
+        font-size: 13px;
+    }
+}
+
 .block3{
     margin-top: 160px;
 }
