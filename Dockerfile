@@ -22,7 +22,6 @@ WORKDIR /var/www/html
 COPY . .
 
 RUN composer install --no-dev --optimize-autoloader
-RUN php artisan key:generate
 
 # Étape 5 : permissions
 RUN chown -R www-data:www-data /var/www/html
