@@ -24,14 +24,6 @@ COPY . .
 # Installer les dépendances PHP
 RUN composer install --no-dev --optimize-autoloader
 
-# Optimisations Laravel
-RUN php artisan config:cache && \
-    php artisan route:cache && \
-    php artisan view:cache
-
-# Créer le lien symbolique storage
-RUN php artisan storage:link || true
-
 # Configuration Nginx
 COPY nginx.conf /etc/nginx/sites-available/default
 
