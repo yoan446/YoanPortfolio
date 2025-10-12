@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/La-b@se-portfolio', function () {
+Route::get('/', function () {
     return view('client.homepage1');
 });
 
