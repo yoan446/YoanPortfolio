@@ -17,14 +17,31 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 # Étape 4 : configuration du projet
 WORKDIR /var/www/html
+
+# Copier tous les fichiers du projet
 COPY . .
+
+# Installer les dépendances PHP
 RUN composer install --no-dev --optimize-autoloader
+
+# Optimisations Laravel
+RUN php artisan config:cache && \
+    php artisan route:cache && \
+    php artisan view:cache
+
+# Créer le lien symbolique storage
+RUN php artisan storage:link || true
 
 # Configuration Nginx
 COPY nginx.conf /etc/nginx/sites-available/default
 
-# Étape 5 : permissions
-RUN chown -R www-data:www-data /var/www/html
+# Étape 5 : permissions (IMPORTANT pour les assets)
+RUN chown -R www-data:www-data /var/www/html/storage \
+    /var/www/html/bootstrap/cache \
+    /var/www/html/public
+
+# Rendre tous les fichiers du dossier public accessibles
+RUN chmod -R 755 /var/www/html/public
 
 # Exposer le port
 EXPOSE 8080
