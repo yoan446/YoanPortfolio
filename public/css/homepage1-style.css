@@ -132,10 +132,10 @@ body {
 
 .right-side-c #moi {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 340px;
+    width: 380px;
     max-width: 100%;
 }
 
@@ -322,7 +322,7 @@ body {
     }
 
     .right-side-c #moi {
-        width: 190px;
+        width: 200px;
     }
 }
 .tools{
@@ -936,7 +936,7 @@ body {
         order: -1;
     }
     .right-side-c #moi {
-        margin-left: 90px;
+        margin-left: 75px;
     }
     .moon{
         width: 220px;
@@ -990,8 +990,9 @@ body {
         height: 250px;
     }
     .right-side-c #moi {
-        margin-left: 90px;
-        width: 190px ;
+        margin-left: 70px;
+        width: 210px ;
+        margin-top: 20px;
     }
     .moon{
         margin-top: 30px;
@@ -1022,6 +1023,7 @@ body {
         height: 200px;
     }
     .right-side-c #moi {
-        width: 160px ;
+        width: 180px ;
+        margin-left: 80px;
     }
 }

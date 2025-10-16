@@ -30,7 +30,7 @@
             <div class="right-side-c">
                 <!-- moon c'est le cercle qui est derière l'image id moi -->
                 <div class="moon"></div>
-                <img src="{{ asset('image/moi.png') }}" alt="moi" id="moi">
+                <img src="{{ asset('image/me.png') }}" alt="moi" id="moi">
             </div>
         </section>
 
@@ -90,6 +90,8 @@
                 
                 <div class="contact-right-side">
                     <form class="contact-form">
+                        @csrf
+
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
