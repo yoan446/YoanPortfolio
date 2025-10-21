@@ -87,6 +87,7 @@
                     </div>
                     <button class="btn-submit">Submit</button>
                 </div>
+                <!-- je suis le plus fort -->
                 
                 <div class="contact-right-side">
                     <form class="contact-form">
