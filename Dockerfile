@@ -1,7 +1,7 @@
 # Étape 1 : image de base
 FROM php:8.2-fpm
 
-# Étape 2 : installation des dépendances système + Nginx
+# Étape 2 : installation des dépendances système + Nginx + Node
 RUN apt-get update && apt-get install -y \
     git \
     curl \
@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     unzip \
     nginx \
+    nodejs \
+    npm \
     && docker-php-ext-install pdo pdo_pgsql zip \
     && rm -rf /var/lib/apt/lists/*
 
@@ -21,13 +23,16 @@ WORKDIR /var/www/html
 # Copier tous les fichiers du projet
 COPY . .
 
-# Installer les dépendances PHP
+# Étape 5 : installation des dépendances PHP
 RUN composer install --no-dev --optimize-autoloader
 
-# Configuration Nginx
+# ✅ Étape 6 : installation de Tailwind + build Vite
+RUN npm install && npm run build
+
+# Étape 7 : configuration Nginx
 COPY nginx.conf /etc/nginx/sites-available/default
 
-# Étape 5 : permissions (IMPORTANT pour les assets)
+# Étape 8 : permissions (IMPORTANT pour les assets)
 RUN chown -R www-data:www-data /var/www/html/storage \
     /var/www/html/bootstrap/cache \
     /var/www/html/public
