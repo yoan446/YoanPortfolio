@@ -25,10 +25,14 @@ footer h2{
 footer span{
     font-size: 14px;
 }
-
+.logo{
+    display: flex;
+    align-items: center;
+}
 .logo img{
     width: 25px;
     margin-top: 10px;
     margin-bottom: 10px;
     cursor: pointer;
+    margin-left: 10px;
 }

@@ -137,7 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                             <div class="project-buttons">
                                 <a href="${project.github_link}" target="_blank" class="btn btn-primary">View Github</a>
-                                <a href="#" class="btn btn-secondary">View Project</a>
                             </div>
                         </div>
 

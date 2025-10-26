@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La b@se Portfolio</title>
+    @vite('resources/css/app.css')
     <!-- Lien vers le fichier CSS -->
     <link href="{{ asset('css/homepage1-style.css') }}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +41,7 @@
             </div>
         </section>
 
-        <section class="block2" >
+        <!-- <section class="block2" >
             <div class="left-block2">
                 <ul class="services">
                     <li><img src="{{asset('image/la-toile.png')}}" alt=""> Website Development</li>
@@ -50,21 +51,47 @@
             </div>
             <div class="right-block2">
                 <h1 style=" color: #ff5c46;" >About me</h1>
-                <p >I'm a passionate software developer with a strong focus on building efficient, user-friendly, and scalable solutions. I enjoy turning ideas into reality through clean code and creative problem-solving. My expertise covers [your main skills: e.g., Python, Django, JavaScript, APIs], and I'm always eager to learn new technologies and take on exciting challenges.</p>
+                <p >I am a passionate software developer dedicated to designing and building high-performance, 
+                    secure, and scalable applications. My expertise spans backend development with Laravel, 
+                    API design, role and permission management (Spatie), and frontend integration using 
+                    modern frameworks such as Next.js and React. I have strong experience in containerization 
+                    with Docker, deployment on cloud platforms like Render, and system performance monitoring 
+                    using Prometheus, Grafana, Locust, and Node Exporter. I’m driven by a desire to create 
+                    efficient and user-centered solutions, blending clean code, automation, and innovation.
+                </p>
 
                 <div class="statistique">
                     <div class="stat-items" >
-                        <h1>120<span style="color: #ff5c46;">+</span></h1>
+                        <h1>5<span style="color: #ff5c46;">+</span></h1>
                         <span style="color: #ffffff; ">Completed Projects</span>
                     </div>
                     <div class="stat-items" style="margin-left: 30px;">
-                        <h1>95<span style="color: #ff5c46;">%</span></h1>
+                        <h1>75<span style="color: #ff5c46;">%</span></h1>
                         <span style="color: #ffffff;">Client Satisfaction</span>
                     </div>
                     <div  class="stat-items" style="margin-left: 30px;">
-                        <h1>10<span style="color: #ff5c46;">+</span></h1>
+                        <h1>3<span style="color: #ff5c46;">+</span></h1>
                         <span style="color: #ffffff;" >Years of experience</span>
                     </div>
+                </div>
+            </div>
+        </section> -->
+       <section class="text-gray-600 body-font" id="block2">
+            <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+                <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+                    <img class="object-cover object-center rounded" alt="hero" src="{{ asset('image/you.jpg') }}" id="about-img">
+                </div>
+                <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900" id="about-titre">Who am i?
+                    </h1>
+                    <p class="mb-8 leading-relaxed" id="about-description">I am a passionate software developer dedicated to designing and building high-performance, 
+                        secure, and scalable applications. My expertise spans backend development with Laravel, 
+                        API design, role and permission management (Spatie), and frontend integration using 
+                        modern frameworks such as Next.js and React. I have strong experience in containerization 
+                        with Docker, deployment on cloud platforms like Render, and system performance monitoring 
+                        using Prometheus, Grafana, Locust, and Node Exporter. I’m driven by a desire to create 
+                        efficient and user-centered solutions, blending clean code, automation, and innovation.
+                    </p>
                 </div>
             </div>
         </section>

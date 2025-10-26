@@ -42,10 +42,10 @@ body {
 }
 
 #hello {
-    margin-left: 110px;
+    margin-left: 30px;
     color: white;
     font-size: 55px;
-    margin-top: 80px;
+    margin-top: 30px;
 }
 
 #point {
@@ -69,20 +69,20 @@ body {
     color: white;
     font-size: 40px;
     font-weight: 300;
-    left: 145px;
+    left: 30px;
 }
 
 #job-name {
     font-size: 3.1em;
     color: white;
     margin-top: 20px;
-    margin-left: 145px;
+    margin-left: 30px;
     width: 100%;
 }
 
 .bouton {
     margin-top: 85px;
-    margin-left: 110px;
+    margin-left: 30px;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
@@ -133,7 +133,7 @@ body {
 .right-side-c #moi {
     position: absolute;
     top: 40%;
-    left: 50%;
+    left: 38%;
     transform: translate(-50%, -50%);
     width: 380px;
     max-width: 100%;
@@ -360,169 +360,26 @@ body {
         transform: translateX(-100%);
     }
 }
-.block2 {
-    display: flex;
-    margin-top: 60px;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 30px;
-}
-
-/* --- Partie gauche --- */
-.left-block2 {
-    width: 50%;
-    margin-top: 50px;
-}
-
-.left-block2 ul {
-    border-left: solid 3px #ff5c46;
-    margin-left: 110px;
+#block2 {
+    margin-left: 50px;
     margin-top: 30px;
 }
 
-.services {
-    display: flex;
-    flex-direction: column; /* Par défaut en colonne */
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-    list-style: none;
-    padding: 0;
+#about-img{
+    width: 300px;
+    border-radius: 300px;
+    border:solid 4px #ff5252;
 }
-
-.services li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: bold;
-    font-size: 16px;
-    color: white;
-}
-
-.services li img {
-    width: 40px;
-    height: auto;
-}
-
-/* --- Partie droite --- */
-.right-block2 {
-    width: 50%;
-}
-
-.right-block2 h1, 
-.right-block2 p {
-    width: 90%;
-    color: white;
-    margin-top: 20px;
-}
-
-.right-block2 h1 {
+#about-titre{
     font-size: 40px;
-    color: #ff5c46;
+    color: #ff5252;
 }
 
-.right-block2 p {
-    font-size: 16px;
-    line-height: 1.7;
-}
-
-.statistique {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.stat-items {
-    flex: 1;
-    min-width: 120px;
-}
-
-/* --- 🌐 Responsive Design --- */
-
-/* TABLETTES (jusqu’à ~1024px) */
-@media screen and (max-width: 1024px) {
-    .block2 {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .left-block2, .right-block2 {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .left-block2 ul {
-        margin-left: 0;
-        border-left: none;
-    }
-
-    .services {
-        align-items: center;
-    }
-
-    .right-block2 h1 {
-        font-size: 32px;
-    }
-
-    .right-block2 p {
-        font-size: 15px;
-    }
-}
-
-/* SMARTPHONES (jusqu’à ~768px) */
-@media screen and (max-width: 768px) {
-    /* On cache la partie Services */
-    .left-block2 {
-        display: none;
-    }
-
-    /* La partie About prend toute la largeur */
-    .right-block2 {
-        width: 100%;
-        text-align: center;
-    }
-
-    .right-block2 h1 {
-        font-size: 28px;
-    }
-
-    .right-block2 p {
-        font-size: 14px;
-        width: 95%;
-        margin: 0 auto;
-    }
-
-    .statistique {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .stat-items {
-        margin-left: 0 !important;
-    }
-}
-
-/* PETITS SMARTPHONES (jusqu’à ~480px) */
-@media screen and (max-width: 480px) {
-    .right-block2 h1 {
-        font-size: 24px;
-    }
-
-    .right-block2 p {
-        font-size: 13px;
-        line-height: 1.5;
-    }
-
-    .stat-items h1 {
-        font-size: 22px;
-    }
-
-    .stat-items span {
-        font-size: 13px;
-    }
+#about-description{
+    color: white;
+    margin-top: 10px;
+    font-weight: 200;
+    font-family: "Roboto", sans-serif;
 }
 
 .block3{
@@ -790,8 +647,8 @@ body {
     width: 350px;
     height: 350px;
     border-radius: 170px;
-    margin-left: 15px;
     margin-top: 70px;
+    margin-right: 50px;
 }
 
 

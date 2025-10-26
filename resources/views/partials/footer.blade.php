@@ -14,11 +14,12 @@
     <footer>
         <h2>Yoan Tioma</h2>
         <span>&copy Made by love, all right reserved for Yoan Tioma</span>
-        <div class="logo">
+        <div class="logo flex justify-center space-x-15">
             <img src="{{ asset('image/e-mail.png') }}" alt="Icône d'email">
             <img src="{{ asset('image/github.png') }}" alt="logo github">
             <img src="{{ asset('image/linkedin-logo.png') }}" alt="logo linkedin">
         </div>
+
     </footer>
 </body>
 </html>
