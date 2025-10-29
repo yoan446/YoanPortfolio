@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('client.homepage1');
+    return view('client.homepage');
 });
 
 Route::get('/navbar', function () {
