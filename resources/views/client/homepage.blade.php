@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La b@se Portfolio</title>
-    @vite('resources/css/app.css')
     <!-- Lien vers le fichier CSS -->
     <link href="{{ asset('css/homepage1-style.css') }}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
