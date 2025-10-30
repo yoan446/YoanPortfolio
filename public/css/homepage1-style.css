@@ -26,7 +26,7 @@ body {
 .block1 {
     display: flex;
     justify-content: space-between;
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 .left-side-c {
@@ -108,12 +108,11 @@ body {
 #lune {
     width: 670px;
     position: relative;
-    bottom: 100px;
 }
 
 #moi {
     position: absolute;
-    top: 35%;
+    top: 40%;
     left: 52%;
     transform: translate(-50%, -50%);
     width: 380px;
@@ -126,8 +125,6 @@ body {
     overflow: hidden;
     height: 35px;
     background-color: #162B3C;
-    position: relative;
-    bottom: 160px;
 }
 
 .tools {
@@ -151,6 +148,7 @@ body {
 .block2 {
     display: flex;
     align-items: center;
+    margin-top: 80px;
 }
 
 .left-block2 {
@@ -441,6 +439,8 @@ body {
     .bouton{margin-left: 60px;}
     .right-block2 {width: 100%;padding: 20px;}
     .project-header { padding: 45px; }
+    .statistique{padding: 20px;}
+    .tools-wrapper{margin-top: 30px;}
 }
 
 /* Tablette moyenne */
@@ -449,6 +449,8 @@ body {
     #lune { width: 500px;  margin-left: -10px; }
     .block2 { flex-direction: column; padding: 10px; }
     .left-block2 { display: none; }
+    .right-block2{margin-top: -80px;}
+    .right-block2 p{ width: 100%;}
     .statistique { justify-content: space-around; }
     .project-items, .contact { flex-direction: column; padding: 60px 40px; gap: 50px; }
 }
@@ -488,11 +490,10 @@ body {
 }
 
 @media (max-width: 360px){
-    #moi{width: 220px; margin-left: -15px; margin-top: -60px;}
+    #moi{width: 220px; margin-left: -15px; margin-top: 0px;}
     #lune { width: 380px;  margin-left: -30px; }
     #hello { font-size: 45px; margin-left: 0; }
     #my-name { font-size: 32px; margin-left: 0; }
     #job-name { font-size: 2.5em; margin-left: 0; }
     .bouton{margin-left: 0;}
-    
 }

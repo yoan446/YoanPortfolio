@@ -126,6 +126,6 @@
 
     <!-- Inclusion du footer -->
     @include('partials.footer')
-    <!-- <script src="{{ asset('js/visitor-side.js') }}"></script> -->
+    <script src="{{ asset('js/visitor-side.js') }}"></script>
 </body>
 </html>
